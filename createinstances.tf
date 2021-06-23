@@ -3,7 +3,7 @@ region ="us-east-2"
 }
 
 resource "aws_instance" "web1" {
-  ami           = data.aws_ami.ubuntu.id
+  ami           = var.ami
   instance_type =  "t2.micro"
 
   tags = {
@@ -11,7 +11,7 @@ resource "aws_instance" "web1" {
   }
 }
 resource "aws_instance" "web2" {
-  ami           =  data.aws_ami.ubuntu.id
+  ami           =  var.ami
   instance_type =   "t2.micro"
 
   tags = {
@@ -19,7 +19,7 @@ resource "aws_instance" "web2" {
   }
 }
 resource "aws_instance" "web3" {
-  ami           =  data.aws_ami.ubuntu.id
+  ami           =  var.ami
   instance_type =  "t2.micro"
 
   tags = {
